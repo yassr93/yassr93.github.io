@@ -6,14 +6,23 @@
     <title>Redirection</title>
     <meta http-equiv="refresh" content="0; url=https://github.com/">
     <script type="text/javascript">
-        // Cette fonction s'exécute lorsque la page est chargée
+        // Fonction pour détecter si l'utilisateur est sur mobile
+        function isMobile() {
+            return /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent);
+        }
+
         window.onload = function() {
-            // Ouvre la boîte email avec l'adresse prédéfinie
-            window.location.href = "mailto:clairauto75@gmail.com";
+            if (isMobile()) {
+                // Sur mobile, ouvrir le client de messagerie
+                window.location.href = "mailto:clairauto75@gmail.com";
+            } else {
+                // Sur PC, rediriger vers Gmail et ouvrir un nouveau message
+                window.location.href = "https://mail.google.com/mail/?view=cm&fs=1&to=clairauto75@gmail.com";
+            }
         }
     </script>
 </head>
 <body>
-    <p>Vous allez être redirigé vers <a href="https://github.com/">GitHub</a> et un email sera ouvert avec notre adresse.</p>
+    <p>Vous allez être redirigé vers <a href="https://github.com/">GitHub</a> et un email sera ouvert avec notre adresse si vous êtes sur mobile. Si vous êtes sur PC, vous serez redirigé vers Gmail pour composer un nouveau message.</p>
 </body>
 </html>
