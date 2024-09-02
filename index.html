@@ -3,13 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Site</title>
+    <title>Redirection</title>
+    <meta http-equiv="refresh" content="0; url=https://github.com/">
+    <script type="text/javascript">
+        // Cette fonction s'exécute lorsque la page est chargée
+        window.onload = function() {
+            // Ouvre la boîte email avec l'adresse prédéfinie
+            window.location.href = "mailto:clairauto75@gmail.com";
+        }
+    </script>
 </head>
 <body>
-
-    <h1>Bienvenue sur mon site</h1>
-    <p>Vous pouvez me contacter par email en cliquant sur le lien ci-dessous :</p>
-    <a href="mailto:clairauto75@gmail.com">Envoyez-moi un email</a>
-
+    <p>Vous allez être redirigé vers <a href="https://github.com/">GitHub</a> et un email sera ouvert avec notre adresse.</p>
 </body>
 </html>
